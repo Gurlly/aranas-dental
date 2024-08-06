@@ -4,15 +4,33 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/preline/preline.js',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        "sans": ["Open Sans", "sans-serif"],
+        "serif": ["Merriweather", "serif"],
+        'mono': ["Roboto Flex", "sans-serif"]
+      },
+      colors: {
+        "primary": "#3098bb",
+        "secondary": "#072d6e",
+        "tertiary": "#3e90ab",
+        "info": "#fdfbf2",
+        "warning": "#febd59",
+        "brown": "#67442d"
       },
     },
+    screens: {
+      'sm': '576px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1200px',
+      '2xl': '1400px'
+    }
   },
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 };
