@@ -6,6 +6,38 @@ import ServicesComponent from "./components/Home/ServicesComponent";
 
 import James from "./resources/James.png";
 
+export const metadata = {
+  title: 'Aranas Dental Clinic', 
+  description: 'Aranas Dental offers comprehensive dental care services including general dentistry, surgery, and orthodontics in Taguig. Book your appointment today!', 
+  viewport: 'width=device-width, initial-scale=1.0',
+  charset: 'UTF-8',
+  keywords: 'Dentist, Philippines, Oral, surgery, teeth, orthodontics, general dentistry', 
+  author: 'Aranas Dental Developers', 
+  canonical: '/',
+
+  openGraph: { 
+    type: 'website', 
+    url: '/', 
+    title: 'Aranas Dental Clinic', 
+    description: 'Aranas Dental offers comprehensive dental care services including general dentistry, surgery, and orthodontics in Taguig. Book your appointment today!', 
+    images: [ 
+    { 
+      url: '/', 
+      alt: 'Aranas Dental Clinic Logo', 
+    }, 
+    ], 
+  }, 
+
+  twitter: { 
+    card: 'summary_large_image', 
+    site: '@', 
+    title: 'Aranas Dental Clinic', 
+    description: 'Aranas Dental offers comprehensive dental care services including general dentistry, surgery, and orthodontics in Taguig. Book your appointment today!', 
+    image: '/', 
+  }, 
+    
+}
+
 export default function Home() {
   return (
     <>
