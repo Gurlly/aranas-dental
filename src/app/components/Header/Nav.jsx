@@ -82,7 +82,7 @@ const PopupNav = () => {
             {
                 links.map((link) => (
                     <li 
-                    className={`text font-semibold font-mono tracking-wider ${link.id === "book" ? "bg-warning hover:bg-amber-400 px-5 py-2 text-neutral-900 hover:text-neutral-800 transition-colors ease-linear" : "text-info"}`}
+                    className={`text font-semibold font-mono tracking-wider ${link.id === "book" ? "bg-warning hover:bg-amber-400 px-5 py-3 text-neutral-900 hover:text-neutral-800 transition-colors ease-linear duration-200 cursor-pointer" : "text-info"}`}
                     key={link.id}
                     >
                         <Link href={link.url}>{link.name}</Link>
