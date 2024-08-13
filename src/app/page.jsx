@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { HeroBanner } from "./components/Home/HeroBanner";
-import ServicesComponent from "./components/Home/ServicesComponent";
-import Location from "./components/location";
+import { HeroBanner } from "@src/app/components/Home/HeroBanner";
+import ServicesComponent from "@src/app/components/Home/ServicesComponent";
+import Location from "@src/app/components/Location";
 
-import James from "../../public/assets/James.png";
+import James from "@public/assets/James.png";
 
 export const metadata = {
   title: "Aranas Dental Clinic",
