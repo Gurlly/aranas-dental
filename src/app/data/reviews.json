@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Jessica H.",
+        "month": 7,
+        "day": 5,
+        "year": 2024,
+        "review": "Aranas Dental always provides excellent service. The staff is friendly and professional. I highly recommend them!",
+        "rating": 5
+    },
+    {
+        "name": "Michael B.",
+        "month": 8,
+        "day": 1,
+        "year": 2024,
+        "review": "Dr. Aranas made my root canal treatment as painless as possible. The clinic's environment is very comforting.",
+        "rating": 4
+    },
+    {
+        "name": "Sophia R.",
+        "month": 6,
+        "day": 15,
+        "year": 2024,
+        "review": "I have been going to Aranas Dental for years. They are always thorough and gentle with my cleanings.",
+        "rating": 5
+    },
+    {
+        "name": "David K.",
+        "month": 3,
+        "day": 10,
+        "year": 2024,
+        "review": "The orthodontic treatment I received at Aranas Dental has been fantastic. My teeth are already looking better!",
+        "rating": 3
+    },
+    {
+        "name": "Emily P.",
+        "month": 5,
+        "day": 25,
+        "year": 2024,
+        "review": "I love my new smile thanks to Aranas Dental. The cosmetic work exceeded my expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Daniel L.",
+        "month": 4,
+        "day": 18,
+        "year": 2024,
+        "review": "Aranas Dental provided me with excellent emergency care. They were quick, efficient, and very supportive.",
+        "rating": 4
+    },
+    {
+        "name": "Sarah T.",
+        "month": 2,
+        "day": 28,
+        "year": 2024,
+        "review": "I always have a pleasant experience at Aranas Dental. The staff is friendly and the service is top-notch.",
+        "rating": 5
+    },
+    {
+        "name": "James M.",
+        "month": 1,
+        "day": 22,
+        "year": 2024,
+        "review": "The dental implants I received from Aranas Dental are perfect. The procedure was smooth and the results are amazing.",
+        "rating": 5
+    },
+    {
+        "name": "Ava W.",
+        "month": 9,
+        "day": 5,
+        "year": 2024,
+        "review": "I am extremely happy with the teeth whitening treatment at Aranas Dental. My teeth have never looked better.",
+        "rating": 4
+    },
+    {
+        "name": "Chris S.",
+        "month": 11,
+        "day": 12,
+        "year": 2024,
+        "review": "Aranas Dental made my child's first dental visit a positive experience. The dentist was very patient and kind.",
+        "rating": 5
+    },
+    {
+        "name": "Nathan M.",
+        "month": 12,
+        "day": 9,
+        "year": 2020,
+        "review": "Aranas Dental became my clinic and I became a regular patient of them because of their quality service.",
+        "rating": 5
+    }
+]

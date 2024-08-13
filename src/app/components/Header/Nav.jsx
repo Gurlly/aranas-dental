@@ -14,22 +14,22 @@ const links = [
   },
   {
     name: "Our Dentists",
-    url: "/pages/about-dentists",
+    url: "/about-dentists",
     id: "dentist"
   },
   {
     name: "Testimonials",
-    url: "/pages/testimonials",
+    url: "/testimonials",
     id: "testimonials"
   },
   {
     name: "Contact Us",
-    url: "/pages/contact",
+    url: "/contact",
     id: "contact"
   },
   {
     name: "Book Now",
-    url: "/pages/book",
+    url: "/book",
     id: "book"
   },
 ];
@@ -52,7 +52,7 @@ const PopupNav = () => {
                 }`}
             >
                 <section
-                className="w-full h-full flex flex-col bg-neutral-900 bg-opacity-90 relative z-50"
+                className="w-full h-full flex flex-col bg-neutral-900 bg-opacity-95 relative z-50"
                 aria-label="NavBar Overlay"
                 >
                     <header className="w-full p-5">
@@ -70,7 +70,12 @@ const PopupNav = () => {
                             className="text-[1.35rem] md:text-2xl font-bold text-zinc-200 font-mono tracking-widest"
                             key={link.id}
                             >
-                            <Link href={link.url}>{link.name}</Link>
+                              <Link 
+                              href={link.url}
+                              onClick={() => setOpen(!open)}
+                              >
+                                {link.name}
+                              </Link>
                             </li>
                         ))}
                         </ul>

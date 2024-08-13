@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import Logo from "../../resources/Logo.png";
+import Logo from "@public/assets/Logo.png";
 import PopupNav from "./Nav";
 
 const Header = () => {

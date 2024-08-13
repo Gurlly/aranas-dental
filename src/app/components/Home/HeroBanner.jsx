@@ -27,7 +27,7 @@ export const HeroBanner = () => {
                   </p>
                 </div>
                 <Link
-                  href="/pages/book"
+                  href="/book"
                   className="relative inline-block px-10 lg:px-14 py-4 bg-neutral-900 lg:text-lg text-white hover:text-zinc-50 font-semibold overflow-hidden group"
                 >
                   <span className="absolute inset-0 bg-tertiary transition-transform duration-300 ease-out transform translate-x-full group-hover:translate-x-0"></span>
