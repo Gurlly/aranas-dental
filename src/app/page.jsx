@@ -10,22 +10,22 @@ import James from "@public/assets/James.png";
 export const metadata = {
   title: "Aranas Dental Clinic",
   description:
-    "Aranas Dental offers comprehensive dental care services including general dentistry, surgery, and orthodontics in Taguig. Book your appointment today!",
+    "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
   keywords:
-    "Dentist, Philippines, Oral, surgery, teeth, orthodontics, general dentistry",
+    "Aranas Dental, Family dental clinic, Comprehensive dental services, Dental care, Oral health, Routine dental check-ups, Advanced dental treatments, Trusted dentist, Dental clinic",
   canonical: "/",
 
   openGraph: {
     url: "/",
     title: "Aranas Dental Clinic",
     description:
-      "Aranas Dental offers comprehensive dental care services including general dentistry, surgery, and orthodontics in Taguig. Book your appointment today!",
+      "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
   },
 
   twitter: {
     title: "Aranas Dental Clinic",
     description:
-      "Aranas Dental offers comprehensive dental care services including general dentistry, surgery, and orthodontics in Taguig. Book your appointment today!",
+      "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
   },
 };
 
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-max px-5 pt-14 md:pt-20 lg:pt-28 xl:pt-36 bg-zinc-100">
+        <section className="w-full h-max px-5 py-14 md:py-20 lg:py-28 xl:py-36 bg-zinc-100">
           <div className="md:container md:mx-auto">
             <h2 className="text-center font-extrabold text-[calc(1.35rem+2dvw)] tracking-widest text-tertiary">
               LOCATION
