@@ -26,12 +26,12 @@ export default function Testimonials() {
 
   return (
     <>
-      <main className="w-full h-max bg-zinc-50">
+      <section className="w-full h-max bg-zinc-50">
         <PageTitle title="Testimonials"/>
         <section aria-label="Reviews section" className="md:container md:mx-auto px-3 py-10 lg:pt-28 lg:pb-20 flex flex-col justify-center items-center gap-y-7">
           <Testimonies/>
         </section>
-      </main>
+      </section>
     </>
   );
 }

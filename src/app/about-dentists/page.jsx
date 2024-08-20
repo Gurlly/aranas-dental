@@ -29,7 +29,7 @@ export const metadata = {
 export default function Dentists() {
   return (
     <>
-      <main className="w-full bg-zinc-50">
+      <section className="w-full bg-zinc-50">
         <PageTitle title="Our Dentist" />
         <section className="md:container md:mx-auto min-h-dvh px-5 py-10 lg:pt-28 lg:pb-20 grid grid-cols-1 md:grid-cols-2 justify-items-center content-center gap-7">
           {doctors.map((doctor) => (
@@ -55,7 +55,7 @@ export default function Dentists() {
             </article>
           ))}
         </section>
-      </main>
+      </section>
     </>
   );
 }

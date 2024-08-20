@@ -28,7 +28,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <>
-      <main className="w-full h-max bg-zinc-50">
+      <section className="w-full h-max bg-zinc-50">
         <PageTitle title="Contact Us"/>
         <section
           aria-label="Contact Us Contents"
@@ -37,7 +37,7 @@ export default function Contact() {
           <Location />
           <ContactForm/>
         </section> 
-      </main>
+      </section>
     </>
   );
 }
