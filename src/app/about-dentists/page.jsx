@@ -10,10 +10,10 @@ export const metadata = {
       "Meet the experienced and compassionate dental professionals at Aranas Dental. Learn more about our doctors' expertise, qualifications, and commitment to providing exceptional oral care for you and your family.",
     keywords:
       "Aranas Dental, Dental professionals, Experienced dentists, Dental experts, Oral care specialists, Dental team, Dentist profiles, Dental clinic",
-    canonical: "/",
+    canonical: "https://aranas-dental.vercel.app/about-dentists",
   
     openGraph: {
-      url: "/",
+      url: "https://aranas-dental.vercel.app/about-dentists",
       title: "Our Doctors",
       description:
         "Meet the experienced and compassionate dental professionals at Aranas Dental. Learn more about our doctors' expertise, qualifications, and commitment to providing exceptional oral care for you and your family.",
@@ -24,7 +24,7 @@ export const metadata = {
       description:
         "Meet the experienced and compassionate dental professionals at Aranas Dental. Learn more about our doctors' expertise, qualifications, and commitment to providing exceptional oral care for you and your family.",
     },
-  };
+};
 
 export default function Dentists() {
   return (

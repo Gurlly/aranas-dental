@@ -3,20 +3,20 @@ import Testimonies from "../components/Testimonials/Testimonies";
 import PageTitle from "../components/PageTitle";
 
 export const metadata = {
-  title: "Customer Reviews",
+  title: "Patient Reviews",
   description:
     "Read real customer reviews and testimonials about their experiences with Aranas Dental. Discover why patients trust us for their dental care and how we consistently deliver high-quality services with exceptional patient care.",
   keywords: "Aranas Dental reviews, Patient testimonials, Dental clinic feedback, Dental care reviews, Dentist reviews, Dental service ratings, Aranas Dental testimonials",
-  canonical: "/",
+  canonical: "https://aranas-dental.vercel.app/testimonials",
 
   openGraph: {
-    title: "Testimonials",
+    title: "Patient Reviews",
     description:
       "Read real customer reviews and testimonials about their experiences with Aranas Dental. Discover why patients trust us for their dental care and how we consistently deliver high-quality services with exceptional patient care.",
   },
 
   twitter: {
-    title: "Testimonials",
+    title: "Patient Reviews",
     description:
       "Read real customer reviews and testimonials about their experiences with Aranas Dental. Discover why patients trust us for their dental care and how we consistently deliver high-quality services with exceptional patient care.",
   },

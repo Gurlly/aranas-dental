@@ -9,10 +9,10 @@ export const metadata = {
     "Contact Aranas Dental for comprehensive dental care. Explore our range of services, special offers, and book your appointment today to ensure your oral health is in expert hands.",
   keywords:
     "Contact Aranas Dental, Dental clinic contact, Book dental appointment, Dental clinic phone number, Dental clinic location, Visit Aranas Dental",
-  canonical: "/",
+  canonical: "https://aranas-dental.vercel.app/contact",
 
   openGraph: {
-    url: "/",
+    url: "https://aranas-dental.vercel.app/contact",
     title: "Contact Aranas Dental",
     description:
       "Contact Aranas Dental for comprehensive dental care. Explore our range of services, special offers, and book your appointment today to ensure your oral health is in expert hands.",

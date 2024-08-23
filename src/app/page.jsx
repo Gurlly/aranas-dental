@@ -13,10 +13,10 @@ export const metadata = {
     "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
   keywords:
     "Aranas Dental, Family dental clinic, Comprehensive dental services, Dental care, Oral health, Routine dental check-ups, Advanced dental treatments, Trusted dentist, Dental clinic",
-  canonical: "/",
+  canonical: "https://aranas-dental.vercel.app/",
 
   openGraph: {
-    url: "/",
+    url: "https://aranas-dental.vercel.app/",
     title: "Aranas Dental Clinic",
     description:
       "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
