@@ -1,7 +1,7 @@
 
-import Location from "../components/Location";
-import ContactForm from "../components/ContactForm";
-import PageTitle from "../components/PageTitle";
+import Location from "../../components/Location";
+import ContactForm from "../../components/ContactForm";
+import PageTitle from "../../components/PageTitle";
 
 export const metadata = {
   title: "Contact Us",

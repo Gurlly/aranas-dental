@@ -45,7 +45,7 @@ const Location = () => {
           </ul>
           <div className="mt-3 lg:mt-5 flex gap-x-5">
             <Link
-              href="/pages/book"
+              href="/book"
               className="w-36 py-2 xl:py-3 border rounded-md bg-warning hover:bg-amber-400 text-center font-semibold transition-colors ease-linear duration-200"
             >
               Book Now

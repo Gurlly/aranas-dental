@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PageTitle from "../components/PageTitle";
+import PageTitle from "../../components/PageTitle";
 import Link from "next/link";
 
 import doctors from "@src/app/data/doctors.json";

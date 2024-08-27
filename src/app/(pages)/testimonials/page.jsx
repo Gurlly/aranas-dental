@@ -1,6 +1,6 @@
 
-import Testimonies from "../components/Testimonials/Testimonies";
-import PageTitle from "../components/PageTitle";
+import Testimonies from "@src/app/components/Testimonies";
+import PageTitle from "@src/app/components//PageTitle";
 
 export const metadata = {
   title: "Patient Reviews",

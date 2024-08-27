@@ -2,7 +2,7 @@
 
 import { React, useState } from "react";
 
-import reviews from "../../data/reviews.json";
+import reviews from "../data/reviews.json";
 
 const Testimonies = () => {
   const months = [

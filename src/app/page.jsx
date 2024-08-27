@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { HeroBanner } from "@src/app/components/Home/HeroBanner";
-import ServicesComponent from "@src/app/components/Home/ServicesComponent";
+import { HeroBanner } from "@src/app/components/HeroBanner";
+import ServicesComponent from "@src/app/components/ServicesComponent";
 import Location from "@src/app/components/Location";
 
 import James from "@public/assets/James.png";
@@ -78,7 +78,7 @@ export default function Home() {
             <ServicesComponent />
             <div className="w-full mt-14 lg:mt-24 2xl:mt-28 flex justify-center">
               <Link
-                href="/pages/book"
+                href="/book"
                 className="px-[calc(4rem+2dvw)] py-3 lg:py-4 lg:text-lg border bg-warning hover:bg-amber-400 font-bold text-neutral-800 transition-colors ease-linear duration-200"
               >
                 Book Now

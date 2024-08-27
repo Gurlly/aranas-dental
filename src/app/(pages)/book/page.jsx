@@ -1,7 +1,7 @@
 
 import { React } from "react";
-import PageTitle from "../components/PageTitle";
-import { BookForm } from "../components/BookForm";
+import PageTitle from "../../components/PageTitle";
+import { BookForm } from "../../components/BookForm";
 
 export const metadata = {
   title: "Book an Appointment",
