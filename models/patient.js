@@ -12,31 +12,25 @@ const PatientSchema = new Schema(
     },
     dateOfBirth: {
       type: Date,
-      required: true,
+      required: false,
     },
     email: {
       type: String,
-      required: true,
+      required: false,
       unique: true,
     },
     phone: {
       type: String,
-      required: true,
+      required: false,
     },
     address: {
-      street: String,
-      city: String,
-      state: String,
-      zip: String,
-    },
-    medicalHistory: {
       type: String,
+      required: false,
     },
-    appointmentDates: [
-      {
-        type: Date,
-      },
-    ],
+    appointmentSchedule: {
+      type: Date,
+      required: true,
+    }
   },
   {
     timestamps: true,
