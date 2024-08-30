@@ -1,14 +1,11 @@
 "use client";
 
 import { React, useState } from "react";
-import useRouter from "next/router";
+import { useRouter } from "next/navigation";
 
 export const BookForm = () => {
-  
-  const router = useRouter;
-
+  const router = useRouter();
   const [patientType, setPatientType] = useState(true); // true = new patient; false = old patient
-
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -28,19 +25,28 @@ export const BookForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await fetch("/api/patients", {
-        method: POST,
+      const res = await fetch("/api/patients", {
+        method: patientType ? "POST" : "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-      if (response.ok) {
-        router.push('/');
-      } 
+
+      if (res.ok) {
+        patientType
+          ? console.log("Your record and appointment is added!")
+          : console.log("Your appointment is added");
+        router.push("/");
+      } else {
+        patientType
+          ? alert("Error adding your record and appointment")
+          : alert("Error adding your appointment");
+      }
     } catch (err) {
-      alert(`Failed to add patient ${err.message}`);
+      alert(`Your appointment cannot be added: ${err.message}`);
     }
   };
 
@@ -98,7 +104,7 @@ export const BookForm = () => {
               type="text"
               id="firstName"
               name="firstName"
-              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary capitalize"
               placeholder="Juan"
               value={formData.firstName}
               onChange={handleChange}
@@ -116,7 +122,7 @@ export const BookForm = () => {
               type="text"
               id="lastName"
               name="lastName"
-              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary capitalize"
               placeholder="Dela Cruz"
               value={formData.lastName}
               onChange={handleChange}
@@ -195,7 +201,7 @@ export const BookForm = () => {
                 type="text"
                 id="address"
                 name="address"
-                className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+                className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary capitalize"
                 minLength={10}
                 value={formData.address}
                 onChange={handleChange}
