@@ -18,6 +18,11 @@ const links = [
     id: "dentist"
   },
   {
+    name: "Services",
+    url: "/services",
+    id: "service"
+  },
+  {
     name: "Testimonials",
     url: "/testimonials",
     id: "testimonials"
