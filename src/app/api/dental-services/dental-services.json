@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Cleaning & Preventive Dentistry",
+    "cardDescription": "Regular cleanings and exams to maintain oral health and prevent cavities and gum disease.",
+    "description": 
+        "Cleaning and preventive dentistry are essential for maintaining optimal oral health and preventing dental issues before they arise. At Aranas Dental Clinic, we offer comprehensive dental cleanings and check-ups to remove plaque, tartar, and bacteria from your teeth and gums. Our preventive services include fluoride treatments, sealants, and thorough oral exams to detect potential problems early. By focusing on prevention, our skilled dental team helps you maintain a healthy smile, reduce the risk of cavities and gum disease, and avoid costly treatments in the future. Regular dental visits, combined with good oral hygiene practices at home, are key to long-term dental health.",
+    "src": "https://images.unsplash.com/photo-1626736985932-c0df2ae07a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "id": "clean-preventive"
+  },
+  {
+    "name": "Orthodontics",
+    "cardDescription": "Specialized treatment to straighten teeth and correct bite alignment using braces or aligners.",
+    "description": 
+        "Orthodontics at Aranas Dental Clinic focuses on diagnosing, preventing, and treating dental and facial irregularities to improve both function and aesthetics. Whether you need traditional metal braces or more discreet options like ceramic braces, our orthodontic solutions cater to patients of all ages. Our experienced orthodontists use the latest technology to create personalized treatment plans that straighten teeth, correct bite issues, and enhance your smile. By aligning your teeth properly, orthodontic treatment not only improves your appearance but also promotes better oral health by making it easier to clean your teeth and prevent gum disease.",
+    "src": "https://images.unsplash.com/photo-1598531228433-d9f0cb960816?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "id": "orthodontics"
+  },
+  {
+    "name": "Teeth Whitening",
+    "cardDescription": "A cosmetic procedure to lighten and remove stains for a brighter, whiter smile.",
+    "description": 
+        "Brighten your smile with our professional teeth whitening services at Aranas Dental Clinic. We offer safe and effective in-office whitening treatments that remove stains and discoloration caused by coffee, tea, wine, smoking, and aging. Our advanced whitening techniques provide faster and more noticeable results compared to over-the-counter products, leaving your teeth several shades whiter in just one visit. Achieve a radiant, confident smile with our customized whitening solutions, tailored to meet your specific needs and ensure your comfort throughout the process.",
+    "src": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "id": "whitening"
+  },
+  {
+    "name": "Fillings",
+    "cardDescription": "Restorative treatment to repair cavities and restore the function and appearance of decayed teeth.",
+    "description": 
+        "Fillings are a common restorative dental procedure used to repair teeth damaged by decay or minor fractures. At Aranas Dental Clinic, we provide both amalgam (silver) and composite (tooth-colored) fillings to restore the function and appearance of your teeth. Our skilled dentists carefully remove the decayed portion of the tooth and fill the cavity with a durable material that blends seamlessly with your natural teeth. Fillings not only restore the tooth’s integrity but also help prevent further decay and maintain your overall oral health.",
+    "src": "https://images.unsplash.com/photo-1670250721717-889b17349fc4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "id": "fillings"
+  },
+  {
+    "name": "Invisalign",
+    "cardDescription": "A series of clear, removable aligners used to discreetly straighten teeth over time.",
+    "description": 
+        "Invisalign is a modern orthodontic treatment that straightens teeth using a series of custom-made, clear, removable aligners. Unlike traditional braces, Invisalign aligners are nearly invisible, making them a popular choice for both teens and adults who want a discreet way to improve their smile. At Aranas Dental Clinic, our Invisalign-certified providers use advanced 3D imaging technology to design a personalized treatment plan that gradually shifts your teeth into the desired position. The aligners are comfortable, easy to wear, and can be removed for eating, brushing, and flossing, offering a convenient and effective solution for achieving a straighter smile.",
+    "src": "https://images.unsplash.com/photo-1564420159030-ad05d6fbc24e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "id": "invisalign"
+  },
+  {
+    "name": "Veneers",
+    "cardDescription": "Thin, custom-made shells placed over the front of teeth to improve appearance and cover imperfections.",
+    "description": 
+        "Veneers are thin, custom-made shells designed to cover the front surface of teeth to enhance their appearance. At Aranas Dental Clinic, we offer high-quality porcelain and composite veneers to address a variety of cosmetic dental issues, such as chipped, stained, misaligned, or uneven teeth. Our expert dentists carefully craft each veneer to match the color, shape, and size of your natural teeth, providing a flawless, natural-looking smile. Veneers are a durable, long-lasting solution that can significantly improve the aesthetics of your smile while also providing strength and resilience comparable to natural tooth enamel.",
+    "src": "https://images.unsplash.com/photo-1679741919483-acf704e00495?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "id": "veneers"
+  },
+  {
+    "name": "Mouthguards",
+    "cardDescription": "Custom-fitted protective devices worn over teeth to prevent injury during sports or to stop teeth grinding.",
+    "description": 
+        "Mouthguards are protective devices worn over the teeth to shield them from injury during sports or other physical activities. At Aranas Dental Clinic, we provide custom-made mouthguards designed to fit comfortably and securely, offering maximum protection for your teeth and gums. Whether you're an athlete or need a nightguard to prevent teeth grinding or clenching during sleep, our custom mouthguards are tailored to your specific needs. They help prevent dental injuries, reduce the risk of concussions, and promote overall oral health by minimizing the impact of trauma on your teeth and jaw.",
+    "src": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "id": "mouthguards"
+  },
+  {
+    "name": "Dentures",
+    "cardDescription": "Removable prosthetics designed to replace multiple missing teeth, restoring function and appearance.",
+    "description": 
+        "Dentures are removable prosthetic devices designed to replace missing teeth and restore your smile’s function and appearance. At Aranas Dental Clinic, we offer both full and partial dentures, customized to fit your mouth comfortably and securely. Our high-quality dentures are crafted from durable materials that mimic the look and feel of natural teeth, providing an effective solution for patients who have lost multiple teeth. Dentures help improve chewing and speaking abilities, support facial structure, and enhance your overall quality of life by restoring confidence in your smile.",
+    "src": "https://images.unsplash.com/photo-1612283105859-6e2585710acd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVldGglMjBmaWxsaW5nfGVufDB8MHwwfHx8Mg%3D%3D",
+    "id": "dentures"
+  }
+]

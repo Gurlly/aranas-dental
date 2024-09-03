@@ -72,7 +72,7 @@ export default function Home() {
 
         <section className="w-full h-max px-5 py-14 md:py-20 lg:py-28 xl:py-36 bg-white">
           <div className="md:container md:mx-auto">
-            <h2 className="text-center font-extrabold text-[calc(1.35rem+2dvw)] tracking-widest text-tertiary">
+            <h2 className="text-center mb-8 md:mb-20 xl:mb-28 font-extrabold text-[calc(1.35rem+2dvw)] tracking-widest text-tertiary">
               SERVICES
             </h2>
             <ServicesComponent />

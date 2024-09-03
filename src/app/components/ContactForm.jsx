@@ -3,8 +3,8 @@ import React from 'react'
 const ContactForm = () => {
   return (
     <>
-        <form className="my-10 md:mb-14 lg:mb-20 xl:mb-24 w-10/12 border mx-auto">
-            <div className='w-full p-5 lg:p-8 bg-neutral-900 text-info'>
+        <form className="my-10 md:mb-14 lg:mb-20 xl:mb-24 w-10/12 border shadow-md shadow-gray-300 rounded-md mx-auto">
+            <div className='w-full p-5 lg:p-8 bg-neutral-900 rounded-t-md text-info'>
                 <h2 className='mb-1.5 text-[calc(1.15rem+1dvw)] text-center font-bold'>Send A Message</h2>
                 <p className='text-sm lg:text-base text-center font-serif font-extralight'>If you have any questions, concerns, or comments regarding Aranas Dental or our Services, please fill out the short contact form below.</p>
             </div>
@@ -30,7 +30,7 @@ const ContactForm = () => {
                 </div>
                 <button 
                 type="submit"
-                className='w-full md:w-4/12 py-2.5 mt-5 border border-brown bg-emerald-600 self-center md:self-start rounded-lg text-info font-bold'
+                className='w-full md:w-4/12 py-2.5 mt-5 border border-stone-500 bg-emerald-600 self-center md:self-start rounded-lg text-info font-bold'
                 >
                     Send
                 </button>
