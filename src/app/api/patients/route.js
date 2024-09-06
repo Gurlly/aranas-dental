@@ -1,6 +1,5 @@
 import connect from "@utils/database";
 import Patient from "@models/patient";
-import twilio from 'twilio';
 import { NextResponse } from "next/server";
 
 export const GET = async () => {
