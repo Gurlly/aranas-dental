@@ -1,5 +1,6 @@
 import connect from "@utils/database";
 import Patient from "@models/patient";
+import twilio from 'twilio';
 import { NextResponse } from "next/server";
 
 export const GET = async () => {
@@ -41,6 +42,8 @@ export const POST = async (req) => {
     appointmentSchedule,
   });
 
+  await sendSMS(firstName, appointmentSchedule, phone);
+
   return NextResponse.json(
     { message: "Patient Added Successfully" },
     { status: 201 }
@@ -48,14 +51,15 @@ export const POST = async (req) => {
 };
 
 export const PUT = async (req) => {
-  const { firstName, lastName, dateOfBirth, appointmentSchedule } = await req.json();
-  
+  const { firstName, lastName, dateOfBirth, appointmentSchedule } =
+    await req.json();
+
   await connect();
 
   const patient = await Patient.findOne({
     firstName: firstName,
     lastName: lastName,
-    dateOfBirth: dateOfBirth
+    dateOfBirth: dateOfBirth,
   });
 
   if (!patient) {
@@ -67,3 +71,18 @@ export const PUT = async (req) => {
 
   return NextResponse.json({ message: "Appointment Updated" }, { status: 200 });
 };
+
+const sendSMS = async (name, date, phone) => {
+  const SID = process.env.ACC_SID;
+  const TOKEN = process.env.ACC_TOKEN;
+  const PHONE = process.env.PHONE;
+
+  const client = require('twilio')(SID, TOKEN);
+  console.log(name, date, phone);
+
+  await client.messages.create({
+    body: `Good day Mr/Ms ${name}, I would like to inform you that your appointment schedule is on ${date}.`,
+    from: PHONE,
+    to: `+${phone}`
+  })
+}

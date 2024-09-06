@@ -181,11 +181,11 @@ export const BookForm = () => {
                   id="phone"
                   name="phone"
                   className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
-                  placeholder="+639774571232"
+                  placeholder="639774831232"
                   value={formData.phone}
                   onChange={handleChange}
-                  maxLength={13}
-                  minLength={13}
+                  maxLength={12}
+                  minLength={12}
                   required
                 />
               </div>
