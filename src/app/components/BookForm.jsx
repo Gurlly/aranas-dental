@@ -19,7 +19,7 @@ export const BookForm = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.name == "email" ? e.target.value: e.target.value.toUpperCase(),
     });
   };
 
@@ -104,7 +104,7 @@ export const BookForm = () => {
               type="text"
               id="firstName"
               name="firstName"
-              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary capitalize"
+              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
               placeholder="Juan"
               value={formData.firstName}
               onChange={handleChange}
@@ -122,7 +122,7 @@ export const BookForm = () => {
               type="text"
               id="lastName"
               name="lastName"
-              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary capitalize"
+              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
               placeholder="Dela Cruz"
               value={formData.lastName}
               onChange={handleChange}
@@ -201,7 +201,7 @@ export const BookForm = () => {
                 type="text"
                 id="address"
                 name="address"
-                className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary capitalize"
+                className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
                 minLength={10}
                 value={formData.address}
                 onChange={handleChange}

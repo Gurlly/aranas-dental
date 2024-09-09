@@ -68,6 +68,8 @@ export const PUT = async (req) => {
   // Use patient's ID to update the appointmentSchedule
   await Patient.findByIdAndUpdate(patient._id, { appointmentSchedule });
 
+  await sendSMS(firstName, appointmentSchedule, patient.phone);
+
   return NextResponse.json({ message: "Appointment Updated" }, { status: 200 });
 };
 
