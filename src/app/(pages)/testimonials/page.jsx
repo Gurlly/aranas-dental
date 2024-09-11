@@ -3,24 +3,28 @@ import Testimonies from "@src/app/components/Testimonies";
 import PageTitle from "@src/app/components//PageTitle";
 
 export const metadata = {
-  title: "Patient Reviews",
-  description:
-    "Read real customer reviews and testimonials about their experiences with Aranas Dental. Discover why patients trust us for their dental care and how we consistently deliver high-quality services with exceptional patient care.",
-  keywords: "Aranas Dental reviews, Patient testimonials, Dental clinic feedback, Dental care reviews, Dentist reviews, Dental service ratings, Aranas Dental testimonials",
-  canonical: "https://aranas-dental.vercel.app/testimonials",
-
+  title: "Testimonials",
+  description: "Read what our satisfied patients have to say about their experience at Aranas Dental Clinic. Discover why we are trusted for quality dental care and exceptional service.",
+  keywords: "patient testimonials, dental reviews, Aranas Dental Clinic reviews, dentist testimonials, patient feedback, dental care experience, satisfied patients",
+  robots: 'index, follow',
   openGraph: {
-    title: "Patient Reviews",
-    description:
-      "Read real customer reviews and testimonials about their experiences with Aranas Dental. Discover why patients trust us for their dental care and how we consistently deliver high-quality services with exceptional patient care.",
+    title: "Testimonials",
+    description: 'Read what our satisfied patients have to say about their experience at Aranas Dental Clinic. Discover why we are trusted for quality dental care and exceptional service.',
+    url: "https://aranas-dental.vercel.app/",
   },
-
   twitter: {
-    title: "Patient Reviews",
-    description:
-      "Read real customer reviews and testimonials about their experiences with Aranas Dental. Discover why patients trust us for their dental care and how we consistently deliver high-quality services with exceptional patient care.",
-  },
+    card: 'summary_large_image',
+    site: '',
+    title: 'Testimonials',
+    description: 'Read what our satisfied patients have to say about their experience at Aranas Dental Clinic. Discover why we are trusted for quality dental care and exceptional service.',
+  }
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  userScalable: true
+}
 
 export default function Testimonials() {
 

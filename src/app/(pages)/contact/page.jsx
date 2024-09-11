@@ -5,25 +5,27 @@ import PageTitle from "../../components/PageTitle";
 
 export const metadata = {
   title: "Contact Us",
-  description:
-    "Contact Aranas Dental for comprehensive dental care. Explore our range of services, special offers, and book your appointment today to ensure your oral health is in expert hands.",
-  keywords:
-    "Contact Aranas Dental, Dental clinic contact, Book dental appointment, Dental clinic phone number, Dental clinic location, Visit Aranas Dental",
-  canonical: "https://aranas-dental.vercel.app/contact",
-
+  description: "Get in touch with Aranas Dental Clinic. Contact us for inquiries, appointments, or assistance. Our team is ready to provide the dental care and information you need.",
+  keywords: "contact Aranas Dental Clinic, dental inquiries, appointment assistance, dentist contact, dental clinic phone number, email dentist, schedule dental consultation",
+  robots: 'index, follow',
   openGraph: {
-    url: "https://aranas-dental.vercel.app/contact",
-    title: "Contact Aranas Dental",
-    description:
-      "Contact Aranas Dental for comprehensive dental care. Explore our range of services, special offers, and book your appointment today to ensure your oral health is in expert hands.",
+    title: "Contact Us",
+    description: 'Get in touch with Aranas Dental Clinic. Contact us for inquiries, appointments, or assistance. Our team is ready to provide the dental care and information you need.',
+    url: "https://aranas-dental.vercel.app/",
   },
-
   twitter: {
-    title: "Contact Aranas Dental",
-    description:
-      "Contact Aranas Dental for comprehensive dental care. Explore our range of services, special offers, and book your appointment today to ensure your oral health is in expert hands.",
-  },
+    card: 'summary_large_image',
+    site: '',
+    title: 'Contact Us',
+    description: 'Get in touch with Aranas Dental Clinic. Contact us for inquiries, appointments, or assistance. Our team is ready to provide the dental care and information you need.',
+  }
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  userScalable: true
+}
 
 export default function Contact() {
   return (

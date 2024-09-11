@@ -1,7 +1,6 @@
 "use client"
 
 import {React, useState, useEffect} from 'react'
-import Image from 'next/image'
 import Services from '@src/app/api/dental-services/dental-services.json'
 import { useRouter } from 'next/navigation'
 import { ParallaxBanner } from 'react-scroll-parallax'

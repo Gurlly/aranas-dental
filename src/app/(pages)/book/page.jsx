@@ -5,25 +5,27 @@ import { BookForm } from "../../components/BookForm";
 
 export const metadata = {
   title: "Book an Appointment",
-  description:
-    "Book your appointment at Aranas Dental Clinic with our easy online scheduling system. Choose your preferred date and time for a dental check-up, teeth cleaning, or any other dental service. Our team is ready to provide you with quality care in a comfortable environment.",
-  keywords:
-    "Book an appointment, Aranas Dental Clinic appointment, online dental booking, schedule a dental visit, dental appointment booking, easy dental scheduling, dental check-up appointment, teeth cleaning appointment, dental care scheduling, book dental service",
-  canonical: "https://aranas-dental.vercel.app/book",
-
+  description: "Schedule your next dental appointment at Aranas Dental Clinic quickly and easily. Choose a convenient date and time for your consultation or treatment with our expert team.",
+  keywords: "book dental appointment, dental appointment scheduling, Aranas Dental Clinic, online appointment, dental consultation, schedule appointment, dentist appointment booking",
+  robots: 'index, follow',
   openGraph: {
-    url: "https://aranas-dental.vercel.app/book",
     title: "Book an Appointment",
-    description:
-      "Book your appointment at Aranas Dental Clinic with our easy online scheduling system. Choose your preferred date and time for a dental check-up, teeth cleaning, or any other dental service. Our team is ready to provide you with quality care in a comfortable environment.",
+    description: 'Schedule your next dental appointment at Aranas Dental Clinic quickly and easily. Choose a convenient date and time for your consultation or treatment with our expert team.',
+    url: "https://aranas-dental.vercel.app/",
   },
-
   twitter: {
-    title: "Book an Appointment",
-    description:
-      "Book your appointment at Aranas Dental Clinic with our easy online scheduling system. Choose your preferred date and time for a dental check-up, teeth cleaning, or any other dental service. Our team is ready to provide you with quality care in a comfortable environment.",
-  },
+    card: 'summary_large_image',
+    site: '',
+    title: 'Book an Appointment',
+    description: 'Schedule your next dental appointment at Aranas Dental Clinic quickly and easily. Choose a convenient date and time for your consultation or treatment with our expert team.',
+  }
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  userScalable: true
+}
 
 export default function Book() {
   

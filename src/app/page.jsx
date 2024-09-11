@@ -9,25 +9,27 @@ import James from "@public/assets/James.png";
 
 export const metadata = {
   title: "Aranas Dental Clinic",
-  description:
-    "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
-  keywords:
-    "Aranas Dental, Family dental clinic, Comprehensive dental services, Dental care, Oral health, Routine dental check-ups, Advanced dental treatments, Trusted dentist, Dental clinic",
-  canonical: "https://aranas-dental.vercel.app/",
-
+  description: "Aranas Dental Clinic provides exceptional dental services, including preventive care, orthodontics, teeth whitening, and more. Schedule your appointment today for a healthier smile.",
+  keywords: "dental care, dentist, teeth whitening, orthodontics, preventive dentistry, fillings, Invisalign, veneers, mouthguards, dentures, dental clinic",
+  robots: 'index, follow',
   openGraph: {
+    title: "Aranas Dental Clinic",
+    description: 'Description for Open Graph',
     url: "https://aranas-dental.vercel.app/",
-    title: "Aranas Dental Clinic",
-    description:
-      "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
   },
-
   twitter: {
-    title: "Aranas Dental Clinic",
-    description:
-      "Welcome to Aranas Dental, your trusted family dental clinic. We offer a full range of dental services, from routine check-ups to advanced treatments, ensuring your oral health is our top priority. Experience personalized care and cutting-edge technology in a comfortable environment.",
-  },
+    card: 'summary_large_image',
+    site: '',
+    title: 'Aranas Dental Clinic',
+    description: 'Aranas Dental Clinic provides exceptional dental services, including preventive care, orthodontics, teeth whitening, and more. Schedule your appointment today for a healthier smile.',
+  }
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  userScalable: true
+}
 
 export default function Home() {
   return (

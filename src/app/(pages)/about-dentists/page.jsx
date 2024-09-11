@@ -5,26 +5,28 @@ import Link from "next/link";
 import doctors from "@src/app/data/doctors.json";
 
 export const metadata = {
-    title: "Our Doctors",
-    description:
-      "Meet the experienced and compassionate dental professionals at Aranas Dental. Learn more about our doctors' expertise, qualifications, and commitment to providing exceptional oral care for you and your family.",
-    keywords:
-      "Aranas Dental, Dental professionals, Experienced dentists, Dental experts, Oral care specialists, Dental team, Dentist profiles, Dental clinic",
-    canonical: "https://aranas-dental.vercel.app/about-dentists",
-  
-    openGraph: {
-      url: "https://aranas-dental.vercel.app/about-dentists",
-      title: "Our Doctors",
-      description:
-        "Meet the experienced and compassionate dental professionals at Aranas Dental. Learn more about our doctors' expertise, qualifications, and commitment to providing exceptional oral care for you and your family.",
-    },
-  
-    twitter: {
-      title: "Our Doctors",
-      description:
-        "Meet the experienced and compassionate dental professionals at Aranas Dental. Learn more about our doctors' expertise, qualifications, and commitment to providing exceptional oral care for you and your family.",
-    },
+  title: "Our Dentists",
+  description: "Get to know the expert dentists at Aranas Dental Clinic. Our experienced team provides compassionate and high-quality dental care to help you achieve a healthy and beautiful smile.",
+  keywords: "dentists, experienced dentists, Aranas Dental Clinic team, dental care professionals, dentist bio, dental experts, dental clinic, best dentists",
+  robots: 'index, follow',
+  openGraph: {
+    title: "Our Dentists",
+    description: 'Get to know the expert dentists at Aranas Dental Clinic. Our experienced team provides compassionate and high-quality dental care to help you achieve a healthy and beautiful smile.',
+    url: "https://aranas-dental.vercel.app/",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '',
+    title: 'Our Dentists',
+    description: 'Get to know the expert dentists at Aranas Dental Clinic. Our experienced team provides compassionate and high-quality dental care to help you achieve a healthy and beautiful smile.',
+  }
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  userScalable: true
+}
 
 export default function Dentists() {
   return (
