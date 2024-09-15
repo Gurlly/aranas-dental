@@ -1,12 +1,12 @@
 import connect from "@utils/database";
-import Patient from "@models/patient";
+import Record from "@models/record";
 import { NextResponse } from "next/server";
 
 export const GET = async () => {
   await connect();
 
-  const patient = await Patient.find();
-  return NextResponse.json({ patient }, { status: 200 });
+  const record = await Record.find();
+  return NextResponse.json({ record }, { status: 200 });
 };
 
 export const POST = async (req) => {
@@ -23,15 +23,15 @@ export const POST = async (req) => {
   await connect();
 
   // Validates if the user is currently in the database.
-  const existingPatient = await Patient.findOne({ firstName, lastName, email });
-  if (existingPatient) {
+  const existingRecord = await Record.findOne({ firstName, lastName, email });
+  if (existingRecord) {
     return new NextResponse(
-      { message: "The user already exist" },
+      { message: "The record already exist" },
       { status: 409 }
     );
   }
 
-  await Patient.create({
+  await Record.create({
     firstName,
     lastName,
     dateOfBirth,
@@ -44,31 +44,30 @@ export const POST = async (req) => {
   await sendSMS(firstName, appointmentSchedule, phone);
 
   return NextResponse.json(
-    { message: "Patient Added Successfully" },
+    { message: "Record Added Successfully" },
     { status: 201 }
   );
 };
 
 export const PUT = async (req) => {
-  const { firstName, lastName, dateOfBirth, appointmentSchedule } =
-    await req.json();
+  const { firstName, lastName, dateOfBirth, appointmentSchedule } = await req.json();
 
   await connect();
 
-  const patient = await Patient.findOne({
+  const record = await Record.findOne({
     firstName: firstName,
     lastName: lastName,
     dateOfBirth: dateOfBirth,
   });
 
-  if (!patient) {
-    return NextResponse.json({ message: "Patient not found" }, { status: 404 });
+  if (!record) {
+    return NextResponse.json({ message: "Record not found" }, { status: 404 });
   }
 
   // Use patient's ID to update the appointmentSchedule
-  await Patient.findByIdAndUpdate(patient._id, { appointmentSchedule });
+  await Record.findByIdAndUpdate(record._id, { appointmentSchedule });
 
-  await sendSMS(firstName, appointmentSchedule, patient.phone);
+  await sendSMS(firstName, appointmentSchedule, record.phone);
 
   return NextResponse.json({ message: "Appointment Updated" }, { status: 200 });
 };

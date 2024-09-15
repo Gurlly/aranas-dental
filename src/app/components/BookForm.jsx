@@ -7,20 +7,45 @@ export const BookForm = () => {
   const router = useRouter();
   const [patientType, setPatientType] = useState(true); // true = new patient; false = old patient
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    dateOfBirth: "",
-    email: "",
+    patientName: {
+      firstName: "",
+      lastName: "",
+      middleInitial: "",
+    },
+    age: "",
+    birthdate: "",
     phone: "",
-    address: "",
-    appointmentSchedule: "",
+    address: {
+      street: "",
+      city: "",
+      province: "",
+      zip: "",
+    },
+    schedule: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.name == "email" ? e.target.value: e.target.value.toUpperCase(),
-    });
+  const today = new Date().toISOString().split('T')[0];  
+  const maxDate = new Date();
+  maxDate.setMonth(maxDate.getMonth()+2);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    const [section, key] = name.split(".");
+
+    if (key) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [section]: {
+          ...prevState[section],
+          [key]: value.toUpperCase(),
+        },
+      }));
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -37,16 +62,16 @@ export const BookForm = () => {
 
       if (res.ok) {
         patientType
-          ? console.log("Your record and appointment is added!")
-          : console.log("Your appointment is added");
+          ? console.log("Your record is added!")
+          : console.log("Appointment Schedule updated");
         router.push("/");
       } else {
         patientType
-          ? alert("Error adding your record and appointment")
-          : alert("Error adding your appointment");
+          ? alert("Error adding your record")
+          : alert("Error uodating your appointment");
       }
     } catch (err) {
-      alert(`Your appointment cannot be added: ${err.message}`);
+      alert(`Error in booking your appointment: ${err.message}`);
     }
   };
 
@@ -55,8 +80,9 @@ export const BookForm = () => {
       onSubmit={handleSubmit}
       className="w-full md:w-4/6 xl:w-3/6 shadow-lg shadow-gray-300 px-5 py-8 bg-neutral-800 rounded-lg"
     >
+      {/** Buttons */}
       <div className="flex gap-x-6 mb-8">
-        <div className="flex ">
+        <div className="flex">
           <input
             type="radio"
             name="patient-status"
@@ -91,90 +117,119 @@ export const BookForm = () => {
           </label>
         </div>
       </div>
+
       <div>
-        <section className="min-w-full mb-3 flex gap-x-5">
-          <div className="flex-1">
+        {/** Name Forms */}
+        <section className="min-w-full mb-3 grid grid-cols-5 gap-x-5">
+          <div className="col-span-2">
             <label
               htmlFor="firstName"
               className="block text-info font-semibold text-sm lg:text-base mb-2"
             >
-              First Name:
+              First Name
             </label>
             <input
               type="text"
               id="firstName"
-              name="firstName"
+              name="patientName.firstName"
               className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
-              placeholder="Juan"
-              value={formData.firstName}
+              placeholder="JUAN"
+              value={formData.patientName.firstName}
               onChange={handleChange}
               required
             />
           </div>
-          <div className="flex-1">
+          <div className="col-span-2">
             <label
               htmlFor="lastName"
               className="block text-info font-semibold text-sm lg:text-base mb-2"
             >
-              Last Name:
+              Last Name
             </label>
             <input
               type="text"
               id="lastName"
-              name="lastName"
+              name="patientName.lastName"
               className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
-              placeholder="Dela Cruz"
-              value={formData.lastName}
+              placeholder="DELA CRUZ"
+              value={formData.patientName.lastName}
               onChange={handleChange}
               required
             />
           </div>
+          <div className="col-span-1">
+            <label
+              htmlFor="middleInitial"
+              className="block text-info font-semibold text-sm lg:text-base mb-2"
+            >
+              M.I.
+            </label>
+            <input
+              type="text"
+              id="middleInitial"
+              name="patientName.middleInitial"
+              className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+              placeholder="A"
+              value={formData.patientName.middleInitial}
+              onChange={handleChange}
+              minLength="1"
+              maxLength="1"
+              required
+            />
+          </div>
         </section>
-        <section className="min-w-full mb-3">
-          <label
-            htmlFor="dateOfBirth"
-            className="block text-info font-semibold text-sm lg:text-base mb-2"
-          >
-            Birthdate:
-          </label>
-          <input
-            type="date"
-            id="dateOfBirth"
-            name="dateOfBirth"
-            value={formData.dateOfBirth}
-            onChange={handleChange}
-            className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
-            required
-          />
+
+        {/** Age and Birthdate Forms */}
+        <section className="min-w-full mb-3 grid grid-cols-3 gap-x-5">
+          {patientType ? (
+            <div className="col-span-1">
+              <label
+                htmlFor="age"
+                className="block text-info font-semibold text-sm lg:text-base mb-2"
+              >
+                Age
+              </label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+                placeholder="15"
+                value={formData.age}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          ) : null}
+          <div className={`${patientType ? "col-span-2" : "col-span-3"}`}>
+            <label
+              htmlFor="birthdate"
+              className="block text-info font-semibold text-sm lg:text-base mb-2"
+            >
+              Birthdate
+            </label>
+            <input
+              type="date"
+              id="birthdate"
+              name="birthdate"
+              value={formData.birthdate}
+              onChange={handleChange}
+              className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+              required
+            />
+          </div>
         </section>
+
         {patientType === true ? (
           <>
-            <section className="min-w-full mb-3 flex gap-x-5">
-              <div className="flex-1">
-                <label
-                  htmlFor="email"
-                  className="block text-info font-semibold text-sm lg:text-base mb-2"
-                >
-                  Email:
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
-                  placeholder="JuanDelaCruz@example.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  minLength={10}
-                  required
-                />
-              </div>
+            {/** Phone */}
+            <section className="min-w-full mb-3 flex">
               <div className="flex-1">
                 <label
                   htmlFor="phone"
                   className="block text-info font-semibold text-sm lg:text-base mb-2"
                 >
-                  Phone Number:
+                  Cellphone Number
                 </label>
                 <input
                   type="tel"
@@ -190,52 +245,121 @@ export const BookForm = () => {
                 />
               </div>
             </section>
-            <section className="min-w-full mb-3">
-              <label
-                htmlFor="address"
-                className="block text-info font-semibold text-sm lg:text-base mb-2"
-              >
-                Full Address:
-              </label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
-                minLength={10}
-                value={formData.address}
-                onChange={handleChange}
-                placeholder="629 P. Rosales St. Sta Ana, Pateros, Metro Manila"
-                required
-              />
+
+            {/** Address */}
+            <section className="min-w-full mb-3 grid grid-rows-3 gap-y-3">
+              {/** Street */}
+              <div className="w-full">
+                <label
+                  htmlFor="street"
+                  className="block text-info font-semibold text-sm lg:text-base mb-2"
+                >
+                  Street Address
+                </label>
+                <input
+                  type="text"
+                  id="street"
+                  name="address.street"
+                  className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+                  placeholder="123 RANDOM STREET"
+                  value={formData.address.street}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              {/** City */}
+              <div className="w-full">
+                <label
+                  htmlFor="city"
+                  className="block text-info font-semibold text-sm lg:text-base mb-2"
+                >
+                  City
+                </label>
+                <input
+                  type="text"
+                  id="city"
+                  name="address.city"
+                  className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+                  placeholder="MAKATI"
+                  value={formData.address.city}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              {/** Province and ZIP */}
+              <div className="grid grid-cols-2 gap-x-5">
+                <div className="w-full">
+                  <label
+                    htmlFor="province"
+                    className="block text-info font-semibold text-sm lg:text-base mb-2"
+                  >
+                    Province
+                  </label>
+                  <input
+                    type="text"
+                    id="province"
+                    name="address.province"
+                    className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+                    placeholder="MAKATI"
+                    value={formData.address.province}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="w-full">
+                  <label
+                    htmlFor="zip"
+                    className="block text-info font-semibold text-sm lg:text-base mb-2"
+                  >
+                    Postal Code (ZIP)
+                  </label>
+                  <input
+                    type="text"
+                    id="zip"
+                    name="address.zip"
+                    className="py-3 px-4 w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+                    placeholder="1000"
+                    value={formData.address.zip}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </div>
             </section>
           </>
         ) : (
           <div></div>
         )}
+
         <section className="min-w-full">
           <label
-            htmlFor="appointmentSchedule"
+            htmlFor="schedule"
             className="block text-info font-semibold text-sm lg:text-base mb-2"
           >
             Appointment Date:
           </label>
           <input
             type="date"
-            id="appointmentSchedule"
-            name="appointmentSchedule"
-            value={formData.appointmentSchedule}
+            id="schedule"
+            name="schedule"
+            value={formData.schedule}
             onChange={handleChange}
             className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm lg:text-base focus:border-primary focus:ring-prborder-primary"
+            min={today}
+            max={maxDate.toISOString().split('T')[0]}
             required
           />
         </section>
+        
         <button
           type="submit"
           className="min-w-36 w-2/5 border border-zinc-50 px-5 py-2 mt-9 bg-emerald-700 hover:bg-emerald-600 rounded-lg text-info font-semibold text-sm lg:text-base transition-colors "
         >
-          Submit
+          Book
         </button>
+
       </div>
     </form>
   );
