@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
 const RecordSchema = new Schema(
   {
@@ -6,24 +7,35 @@ const RecordSchema = new Schema(
       firstName: {
         type: String,
         required: true,
+        trim: true,
       },
       lastName: {
         type: String,
         required: true,
+        trim: true,
       },
       middleInitial: {
         type: String,
         required: true,
+        maxlength: 1,
       },
     },
-    age: { type: Number, required: true },
+    age: { 
+      type: Number, 
+      required: true,
+      min: 0,
+      max: 120
+    },
     birthdate: { type: Date, required: true },
     phone: {
       type: String,
       required: true,
-      minlength: 12,
-      maxlength: 12,
-      match: /^[0-9]+$/,
+      validate: {
+        validator: function(v) {
+          return /^[\d\s\-+()]{10,20}$/.test(v);
+        },
+        message: props => `${props.value} is not a valid phone number!`
+      }
     },
     address: {
       street: {
@@ -51,4 +63,4 @@ const RecordSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Record", RecordSchema) || mongoose.models.Record;
+module.exports = mongoose.model("Record", RecordSchema);
