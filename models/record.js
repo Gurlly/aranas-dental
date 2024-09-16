@@ -51,5 +51,4 @@ const RecordSchema = new Schema(
   }
 );
 
-module.exports =
-  mongoose.model("Record", RecordSchema) || mongoose.models.Record;
+module.exports = mongoose.model("Record", RecordSchema) || mongoose.models.Record;

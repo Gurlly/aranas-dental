@@ -1,12 +1,13 @@
 import connect from "@utils/database";
-import Record from "@models/record";
+import record from "@models/record";
+
 import { NextResponse } from "next/server";
 
 export const GET = async () => {
   await connect();
 
-  const record = await Record.find();
-  return NextResponse.json({ record }, { status: 200 });
+  const patientRecord = await record.find();
+  return NextResponse.json({ patientRecord }, { status: 200 });
 };
 
 export const POST = async (req) => {
