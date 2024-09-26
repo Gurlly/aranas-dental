@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
 
-const RecordSchema = new Schema(
+const PatientRecordSchema = new mongoose.Schema(
   {
-    patientname: {
+    patientName: {
       firstName: {
         type: String,
         required: true,
@@ -63,4 +62,6 @@ const RecordSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Record", RecordSchema);
+const PatientRecord =  mongoose.models.PatientRecord || mongoose.model("PatientRecord", PatientRecordSchema);
+
+module.exports = PatientRecord;

@@ -1,7 +1,48 @@
 import connect from "@utils/database";
-import record from "@models/record";
-
+import PatientRecord from "@models/record";
 import { NextResponse } from "next/server";
+
+// Get all data in the collection
+export const GET = async () => {
+  await connect();
+  const patientRecords = await PatientRecord.find();
+
+  return new NextResponse.json({ patientRecords }, { status: 200 });
+};
+
+// Add new record in the collection
+export const POST = async (req) => {
+  await connect();
+  const { patientName, age, birthdate, phone, address, schedule } = await req.json();
+
+  // Validation if the data exist using the user phone.
+  const existingRecord = await PatientRecord.findOne({phone});
+
+  if (existingRecord) {
+    return new NextResponse({ error: "Record already exists" }, { status: 409 });
+  }
+
+  await PatientRecord.create({
+    patientName: {
+      firstName: patientName.firstName,
+      lastName: patientName.lastName,
+      middleInitial: patientName.middleInitial
+    },
+    age,
+    birthdate,
+    phone,
+    address: {
+      street: address.street,
+      city: address.city,
+      province: address.province,
+      zip: address.zip
+    },
+    schedule
+  });
+
+
+  return NextResponse.json({ message: "Adding Record Successfuly "}, { status: 201 });
+};
 
 /*
 const sendSMS = async (name, date, phone) => {

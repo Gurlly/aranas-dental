@@ -62,16 +62,16 @@ export const BookForm = () => {
 
       if (res.ok) {
         patientType
-          ? console.log("Your record is added!")
-          : console.log("Appointment Schedule updated");
+          ? console.log("A record has been added!")
+          : console.log("Appointment Schedule is updated");
         router.push("/");
       } else {
         patientType
-          ? alert("Error adding your record")
-          : alert("Error uodating your appointment");
+          ? alert("Error adding the record")
+          : alert("Error updating the appointment");
       }
     } catch (err) {
-      alert(`Error in booking your appointment: ${err.message}`);
+      alert(`Error in booking the appointment: ${err.message}`);
     }
   };
 
